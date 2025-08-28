@@ -60,3 +60,12 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 # Aliases
 alias ll="ls -l"
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+
+# fzf autocompletions
+source ~/.zsh/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+bindkey '^I' fzf_completion
+zstyle ':completion:*' fzf-search-display true
