@@ -4,7 +4,7 @@ mkdir -p "$HOME/.zsh/plugins"
 git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git "$HOME/.zsh/themes/spaceship-prompt"
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.zsh/plugins/fast-syntax-highlighting/
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
-git clone https://github.com/lincheney/fzf-tab-completion ~/.zsh/plugins/fzf-tab-completion
+git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 
 # Add tmux plugins
 mkdir -p ~/.config/tmux/plugins/catppuccin
