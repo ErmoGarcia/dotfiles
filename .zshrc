@@ -97,5 +97,20 @@ setopt hist_find_no_dups
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
+# fzf autocompletions
+source ~/.zsh/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+bindkey '^I' fzf_completion
+zstyle ':completion:*' fzf-search-display true
+
+# opencode
+export PATH=/home/ermodev/.opencode/bin:$PATH
+
+# Android SDK
+# Export the Android SDK path 
+export ANDROID_HOME=$HOME/android
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
 # Neovim
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export EDITOR='nvim'
+export VISUAL='nvim'
