@@ -62,8 +62,9 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
 # Aliases
-alias ll="ls -l --color"
+alias ll="ls -l --color=auto"
 alias arc="arcanist"
+alias bat="batcat"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -95,3 +96,6 @@ setopt hist_find_no_dups
 # History search
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+
+# Neovim
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
