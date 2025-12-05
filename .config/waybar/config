@@ -1,0 +1,42 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 32,
+	"modules-left": ["sway/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["pulseaudio", "battery", "network", "tray"],
+
+
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true
+	},
+
+
+	"clock": {
+		"format": "{:%Y-%m-%d %H:%M}"
+	},
+
+
+	"pulseaudio": {
+		"format": " {volume}%",
+		"format-muted": " muted",
+		"scroll-step": 5,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+	},
+
+
+	"battery": {
+		"format": " {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-discharging": " {capacity}%"
+	},
+
+
+	"network": {
+		"format-wifi": " {essid}",
+		"format-ethernet": " {ip}"
+	}
+}
