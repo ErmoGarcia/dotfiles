@@ -283,4 +283,7 @@ set $accent $lavender
 
 client.focused          $accent $mantle $text $accent
 
+# Battery monitor
+exec bash $path/battery.sh &
+
 include /etc/sway/config.d/*
