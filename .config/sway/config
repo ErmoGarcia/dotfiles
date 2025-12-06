@@ -286,4 +286,8 @@ client.focused          $accent $mantle $text $accent
 # Battery monitor
 exec bash $path/battery.sh &
 
+# Volume controls
+bindcode 122 exec 'pactl set-sink-volume @DEFAULT_SINK@ -5%'
+bindcode 123 exec 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
+
 include /etc/sway/config.d/*
