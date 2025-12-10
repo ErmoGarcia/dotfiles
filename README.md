@@ -11,3 +11,7 @@ Source the ZSH config:
 When a new file is added, create a symlink in the home dir:
 
 ```stow .```
+
+To make screenshot scrip work:
+
+`sudo apt install jq wf-recorder grim slurp fuzzel`
