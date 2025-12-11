@@ -11,25 +11,16 @@ fi
 path="$( dirname "$(readlink -f "$0")" )"
 
 while [[ 0 -eq 0 ]]; do
-	battery_status="$(cat /sys/class/power_supply/BAT1/status)"
-	battery_charge="$(cat /sys/class/power_supply/BAT1/capacity)"
+	battery_status="$(cat /sys/class/power_supply/BAT0/status)"
+	battery_charge="$(cat /sys/class/power_supply/BAT0/capacity)"
 
-	if [[ $battery_status == 'Discharging' && $battery_charge -le 85 ]]; then
+	if [[ $battery_status == 'Discharging' && $battery_charge -le 25 ]]; then
 		if   [[ $battery_charge -le 15 ]]; then
-			notify-send --icon="$path/battery_critical.svg" --urgency=critical "Battery critical!" "${battery_charge}%"
-			sleep 180
-		elif [[ $battery_charge -le 25 ]]; then
-			notify-send --icon="$path/battery_critical.svg" --urgency=critical "Battery critical!" "${battery_charge}%"
-			sleep 240
-		elif [[ $battery_charge -le 40 ]]; then
-			notify-send --icon="$path/battery_low.svg" "Battery low!" "${battery_charge}%"
-			sleep 360
-		elif [[ $battery_charge -le 60 ]]; then
-			notify-send --icon="$path/battery_low.svg" "Battery low!" "${battery_charge}%"
-			sleep 480
+			notify-send -t 10000 --icon="$path/battery_critical.svg" --urgency=critical "Battery critical!" "${battery_charge}%"
+			sleep 60
 		else
-			notify-send --icon="$path/battery_low.svg" "Battery low!" "${battery_charge}%"
-			sleep 600
+			notify-send -t 10000 --icon="$path/battery_low.svg" "Battery low!" "${battery_charge}%"
+			sleep 120
 		fi
 	else
 		sleep 600

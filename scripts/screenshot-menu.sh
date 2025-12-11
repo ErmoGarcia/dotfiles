@@ -21,10 +21,10 @@ chosen=$(printf "Screenshot: Full screen\nScreenshot: Selection\nRecord: Full sc
 timestamp=$(date +%F-%H%M%S)
 
 case "$chosen" in
-    "Full screen")
+    "Screenshot: Full screen")
         grim "$DIR_PICTURES/Pictures/screenshot-$timestamp.png"
         ;;
-    "Selection")
+    "Screenshot: Selection")
         grim -g "$(slurp)" "$DIR_PICTURES/Pictures/screenshot-$timestamp.png"
         ;;
     "Record: Full screen")
