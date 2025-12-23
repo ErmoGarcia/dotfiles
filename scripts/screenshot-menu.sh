@@ -22,10 +22,10 @@ timestamp=$(date +%F-%H%M%S)
 
 case "$chosen" in
     "Screenshot: Full screen")
-        grim "$DIR_PICTURES/Pictures/screenshot-$timestamp.png"
+        grim "$DIR_PICTURES/screenshot-$timestamp.png"
         ;;
     "Screenshot: Selection")
-        grim -g "$(slurp)" "$DIR_PICTURES/Pictures/screenshot-$timestamp.png"
+        grim -g "$(slurp)" "$DIR_PICTURES/screenshot-$timestamp.png"
         ;;
     "Record: Full screen")
         monitor=$(printf "$OUTPUT1\n$OUTPUT2" | \
