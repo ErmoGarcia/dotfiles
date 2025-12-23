@@ -293,3 +293,6 @@ bindcode 123 exec 'pactl set-sink-volume @DEFAULT_SINK@ +5%'
 include /etc/sway/config.d/*
 
 bindsym Print exec bash $HOME/scripts/screenshot-menu.sh &
+
+# PolicyKit agent
+exec /usr/bin/lxqt-policykit-agent &
